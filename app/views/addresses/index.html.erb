@@ -1,0 +1,36 @@
+<%= flash_messages %>
+<h2>Address List</h2>
+<div class="product-block">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-2">Address</th>
+        <th class="col-md-2">Landmark</th>
+        <th class="col-md-2">Pincode</th>
+        <th class="col-md-2">City</th>
+        <th class="col-md-2">Ctate</th>
+        <th class="col-md-4">Country</th>
+        <th class="col-md-4">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @addres.each do |addres| %>
+        <tr>
+          <td class="col-md-2"><%= addres.address %></td>
+          <td class="col-md-2"><%= addres.landmark %></td>
+          <td class="col-md-2"><%= addres.pincode %></td>
+          <td class="col-md-2"><%= addres.city %></td>
+          <td class="col-md-2"><%= addres.state %></td>
+          <td class="col-md-2"><%= addres.country %></td>
+          <td class="col-md-4">
+            <%= link_to 'Show', address_path(addres), class: "btn btn-info" %>
+            <%= link_to 'Edit', edit_address_path(addres), class: "btn  btn-warning" %>
+            <%= link_to 'Destroy', address_path(addres), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+<%= link_to 'New Address', new_address_path, class: "btn btn-primary" %>

@@ -30,7 +30,7 @@ development:
   # database: phollowup
   #database: testphollowup
   #database: asvinphollowup
-  database: orders
+  database: order_india
   host: localhost
   pool: 5
   username: postgres

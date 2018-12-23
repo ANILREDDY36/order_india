@@ -66,3 +66,5 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+gem 'carrierwave'
+gem 'mini_magick' # For different versions of an image
